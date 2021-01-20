@@ -32,12 +32,16 @@ private Mapper mapper;
 public List<Client> getReservations(){
     return service.getReservations();
 }
-    @PostMapping("/restaurants/reservation/{RestaurantName]")
-    public Client addReservation(@PathVariable String name, @RequestBody Client client, BindingResult bindingResult) throws ValidationException {
+
+
+
+
+    @PostMapping("/restaurants/reservation/{RestaurantName}")
+    public Client addReservation(@PathVariable String RestaurantName, @RequestBody Client client, BindingResult bindingResult) throws ValidationException {
         if (bindingResult.hasErrors()) {
             throw new ValidationException( "problem" );
         }
-Client client1=mapper.convertToClietn( client,name );
+Client client1=mapper.convertToClietn( client,RestaurantName );
         return service.addReservation(client1);
     }
 }
