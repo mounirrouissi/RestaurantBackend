@@ -24,7 +24,7 @@ public class RestaurantConfig {
             Restaurant restaurant=new Restaurant("The_Local","Available",
                     LocalDate.of(2000, Month.MAY,2));
             restaurentRepo.save( restaurant );
-            Client client=new Client("Salim","dfdf@gmail.com",2,"The Cave");
+            Client client=new Client("Karim","dfdf@gmail.com",2,"The Cave");
             clientRepo.save( client );
         };
 
