@@ -25,14 +25,14 @@ public class Mapper {
 
 
     public Client convertToClietn(Client c,String s) {
-        var Client = new Client();
-        Client.setId(c.getId());
-        Client.setName(c.getName());
-        Client.setEmail(c.getEmail());
-        Client.setPlaces(c.getPlaces());
-        Client.setRestaurantName(s);
+        Client cl = new Client();
+        cl.setId(c.getId());
+        cl.setName(c.getName());
+        cl.setEmail(c.getEmail());
+        cl.setPlaces(c.getPlaces());
+        cl.setRestaurantName(s);
 
-        return Client;
+        return cl;
     }
 
 }
